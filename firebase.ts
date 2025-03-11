@@ -2,7 +2,6 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
-// Your Firebase Config (Replace with your actual Firebase config)
 const firebaseConfig = {
     apiKey: "AIzaSyBwlpkLjAQX04_bxTuWTi96CjE3pZz2wbY",
     authDomain: "job-tracker-b02b0.firebaseapp.com",

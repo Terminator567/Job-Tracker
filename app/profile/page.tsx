@@ -50,7 +50,7 @@ export default function Profile() {
   return (
     <div className="max-w-lg mx-auto mt-10 p-6 bg-white dark:bg-gray-900 shadow-lg rounded-lg text-gray-900 dark:text-gray-100">
       
-      {/* 🔹 Navigation Button */}
+      {/*Navigation Button */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Profile</h1>
         <Link href="/jobs">
@@ -60,13 +60,13 @@ export default function Profile() {
         </Link>
       </div>
 
-      {/* 🔹 User Info Card */}
+      {/*User Info Card */}
       <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow">
         <h2 className="text-xl font-bold mb-2">{user?.email || "Loading..."}</h2>
         <p className="text-gray-600 dark:text-gray-300">Total Applications: <strong>{totalApplications}</strong></p>
         <p className="text-gray-600 dark:text-gray-300">Success Rate: <strong>{successRate}%</strong></p>
 
-        {/* 🔹 Success Rate Progress Bar */}
+        {/*Success Rate Progress Bar */}
         <div className="w-full bg-gray-300 dark:bg-gray-700 rounded h-4 mt-4">
           <div
             className="h-4 rounded bg-green-500 transition-all"
@@ -75,7 +75,7 @@ export default function Profile() {
         </div>
       </div>
 
-      {/* 🔹 Editable Profile Fields */}
+      {/*Editable Profile Fields */}
       <div className="mt-6 bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow">
         <h2 className="text-lg font-bold mb-3">Edit Profile</h2>
         <input
@@ -106,7 +106,7 @@ export default function Profile() {
         </button>
       </div>
 
-      {/* 🔹 Logout Button */}
+      {/*Logout Button */}
       <button
         onClick={() => {
           auth.signOut();

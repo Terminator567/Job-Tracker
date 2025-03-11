@@ -1,9 +1,9 @@
-"use client"; // ✅ Required for client components
+"use client"; 
 
 import { auth, signOut } from "../firebase";
 import { useState, useEffect, createContext, ReactNode } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link"; // ✅ Import Link for Navigation
+import Link from "next/link"; 
 
 export const AuthContext = createContext<any>(null);
 
@@ -20,7 +20,7 @@ export default function AuthContextProvider({ children }: { children: ReactNode 
 
   const handleLogout = async () => {
     await signOut(auth);
-    router.push("/auth"); // Redirect to login page
+    router.push("/auth"); 
   };
 
   return (

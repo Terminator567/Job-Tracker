@@ -9,13 +9,12 @@ import Link from "next/link";
 export default function JobTracker() {
   const [jobs, setJobs] = useState<any[]>([]);
   const [newJob, setNewJob] = useState({ company: "", position: "", status: "Applied", deadline: "" });
-  const [sortField, setSortField] = useState("deadline"); // Default sort by deadline
-  const [sortDirection, setSortDirection] = useState("asc"); // Default ascending order
+  const [sortField, setSortField] = useState("deadline"); 
+  const [sortDirection, setSortDirection] = useState("asc");
   const [searchTerm, setSearchTerm] = useState("");
   const [user, setUser] = useState<any>(null);
   const router = useRouter();
 
-  // ✅ Ensure Firestore listener starts ONLY after authentication is confirmed
   useEffect(() => {
     const unsubscribeAuth = auth.onAuthStateChanged((currentUser) => {
       if (!currentUser) {
@@ -29,7 +28,7 @@ export default function JobTracker() {
   }, [router]);
 
   useEffect(() => {
-    if (!user) return; // ✅ Prevents listener from running before authentication
+    if (!user) return;
 
     const q = query(
       collection(db, "jobs"),
@@ -78,7 +77,7 @@ export default function JobTracker() {
   return (
     <div className="p-6 max-w-3xl mx-auto">
       
-      {/* 🔹 Header with Profile Button */}
+      {/*Header with Profile Button */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Job Tracker</h1>
         <Link href="/profile">
@@ -88,7 +87,7 @@ export default function JobTracker() {
         </Link>
       </div>
 
-      {/* 🔹 Search Bar */}
+      {/*Search Bar */}
       <div className="mb-4">
         <input
           type="text"
@@ -99,7 +98,7 @@ export default function JobTracker() {
         />
       </div>
 
-      {/* 🔹 Job Entry Form */}
+      {/*Job Entry Form */}
       <div className="bg-gray-100 p-4 rounded-lg mb-4">
         <input
           type="text"
@@ -126,7 +125,7 @@ export default function JobTracker() {
         </button>
       </div>
 
-      {/* 🔹 Job Table */}
+      {/*Job Table */}
       <table className="w-full border-collapse border border-gray-300">
         <thead>
           <tr className="bg-gray-200">

@@ -92,7 +92,7 @@ export default function JobStats() {
     <div className="p-6 max-w-3xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Job Statistics</h1>
 
-      {/* 🔍 Filter By Company */}
+      {/*Filter By Company */}
       <input
         type="text"
         placeholder="Filter by Company"
@@ -101,19 +101,19 @@ export default function JobStats() {
         className="border p-2 rounded w-full mb-4 text-gray-800"
       />
 
-      {/* 📊 Bar Chart (Job Status Counts) */}
+      {/*Bar Chart (Job Status Counts) */}
       <div className="bg-gray-100 p-4 rounded-lg mb-6 shadow">
         <h2 className="text-xl font-bold mb-2">Job Applications by Status</h2>
         <Bar data={barChartData} />
       </div>
 
-      {/* 🥧 Pie Chart (Job Status Percentage) */}
+      {/*Pie Chart (Job Status Percentage) */}
       <div className="bg-gray-100 p-4 rounded-lg mb-6 shadow">
         <h2 className="text-xl font-bold mb-2">Job Status Breakdown</h2>
         <Pie data={pieChartData} />
       </div>
 
-      {/* 📅 Line Chart (Applications Over Time) */}
+      {/*Line Chart (Applications Over Time) */}
       <div className="bg-gray-100 p-4 rounded-lg shadow">
         <h2 className="text-xl font-bold mb-2">Applications Over Time</h2>
         <Line data={lineChartData} />
